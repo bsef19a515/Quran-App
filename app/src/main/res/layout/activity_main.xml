@@ -6,13 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ListView
-        android:id="@+id/listview"
-        android:layout_width="340dp"
-        android:layout_height="569dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/quranapp"
+        android:layout_width="123dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="68dp"
+        android:background="#CFFBD1"
+        android:backgroundTint="#E9FDD0"
+        android:text="@string/quranapp"
+        android:textColor="#307A33"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.879" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/englishsurah"
+        android:layout_width="201dp"
+        android:layout_height="52dp"
+        android:backgroundTint="#37853A"
+        android:text="@string/englishsurah"
+        app:layout_constraintBottom_toTopOf="@+id/urdusurah"
+        app:layout_constraintEnd_toEndOf="@+id/quranapp"
+        app:layout_constraintStart_toStartOf="@+id/quranapp"
+        app:layout_constraintTop_toBottomOf="@+id/quranapp" />
+
+    <Button
+        android:id="@+id/urdusurah"
+        android:layout_width="206dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#347A37"
+        android:text="@string/urdusurah"
+        app:layout_constraintEnd_toEndOf="@+id/englishsurah"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/englishsurah"
+        app:layout_constraintTop_toBottomOf="@+id/quranapp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
