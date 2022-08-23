@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication14">
         <activity
+            android:name=".UrduParahNames"
+            android:exported="false" />
+        <activity
+            android:name=".EngParahNames"
+            android:exported="false" />
+        <activity
             android:name=".EngSurahNames"
             android:exported="false" />
         <activity
@@ -24,7 +30,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
-            </manifest>
+</manifest>

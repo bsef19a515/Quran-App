@@ -22,8 +22,8 @@
 
     <Button
         android:id="@+id/englishsurah"
-        android:layout_width="201dp"
-        android:layout_height="52dp"
+        android:layout_width="246dp"
+        android:layout_height="55dp"
         android:backgroundTint="#37853A"
         android:text="@string/englishsurah"
         app:layout_constraintBottom_toTopOf="@+id/urdusurah"
@@ -33,8 +33,8 @@
 
     <Button
         android:id="@+id/urdusurah"
-        android:layout_width="206dp"
-        android:layout_height="51dp"
+        android:layout_width="250dp"
+        android:layout_height="52dp"
         android:layout_marginTop="100dp"
         android:backgroundTint="#347A37"
         android:text="@string/urdusurah"
@@ -42,4 +42,28 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/englishsurah"
         app:layout_constraintTop_toBottomOf="@+id/quranapp" />
+
+    <Button
+        android:id="@+id/englishparah"
+        android:layout_width="253dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#37853A"
+        android:text="@string/englishpara"
+        app:layout_constraintEnd_toEndOf="@+id/urdusurah"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="@+id/urdusurah"
+        app:layout_constraintTop_toBottomOf="@+id/urdusurah" />
+
+    <Button
+        android:id="@+id/urduparah"
+        android:layout_width="248dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#37853A"
+        android:text="@string/urdupara"
+        app:layout_constraintEnd_toEndOf="@+id/englishparah"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="@+id/englishparah"
+        app:layout_constraintTop_toBottomOf="@+id/englishparah" />
 </androidx.constraintlayout.widget.ConstraintLayout>

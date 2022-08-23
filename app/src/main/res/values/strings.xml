@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">My Application14</string>
     <string name="quranapp">Quran App</string>
-    <string name="englishsurah">English Surah</string>
-    <string name="urdusurah">Urdu Surah</string>
+    <string name="englishsurah">English Surah Index</string>
+    <string name="urdusurah">Urdu Surah Index</string>
+    <string name="englishpara">English Parah Index</string>
+    <string name="urdupara">Urdu Parah Index</string>
+
 
 </resources>
