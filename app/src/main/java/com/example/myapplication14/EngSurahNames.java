@@ -9,7 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class EngSurahNames extends AppCompatActivity {
+public class EngSurahNames extends AppCompatActivity{
     ListView listVieweng;
 
     QDH qdh=new QDH();
@@ -31,9 +31,15 @@ public class EngSurahNames extends AppCompatActivity {
         listVieweng.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String item=listVieweng.getItemAtPosition(i).toString();
-                Intent intent=new Intent(getApplicationContext(),EngSurah.class);
-                intent.putExtra("file",item);
+                int start = qdh.SSP[i];
+                int end = qdh.SSP[i+1];
+                QuranArabicText qat = new QuranArabicText();
+                if (start == 6342) {
+                    end = qat.QuranArabicText.length - 1;
+                }
+                Intent intent = new Intent(EngSurahNames.this, EngSurah.class);
+                intent.putExtra("start", start);
+                intent.putExtra("end", end);
                 startActivity(intent);
             }
         });
