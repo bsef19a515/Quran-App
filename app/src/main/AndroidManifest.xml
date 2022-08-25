@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication14">
         <activity
+            android:name=".EngParah"
+            android:exported="false" />
+        <activity
             android:name=".EngSurah"
             android:exported="false" />
         <activity

@@ -2,7 +2,10 @@ package com.example.myapplication14;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -25,6 +28,22 @@ public class UrduSurahNames extends AppCompatActivity {
                 (this, android.R.layout.simple_list_item_1,surahNamesurdu);
         listView = findViewById(R.id.listviewurdu);
         listView.setAdapter(arrayAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                int start = qdh.SSP[i];
+                int end = qdh.SSP[i+1];
+                QuranArabicText qat = new QuranArabicText();
+                if (start == 6342) {
+                    end = qat.QuranArabicText.length - 1;
+                }
+                Intent intent = new Intent(UrduSurahNames.this, EngSurah.class);
+                intent.putExtra("start", start);
+                intent.putExtra("end", end);
+                startActivity(intent);
+            }
+        });
 
     }
 }

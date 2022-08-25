@@ -8,22 +8,20 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
-public class EngSurah extends AppCompatActivity  {
+public class EngParah extends AppCompatActivity {
     QuranArabicText qat=new QuranArabicText();
-    ListView engSurah;
+    ListView engParah;
     ArrayList<String> data = new ArrayList<String>();
-
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eng_surah);
+        setContentView(R.layout.activity_eng_parah);
 
-        engSurah=findViewById(R.id.engsurah);
+        engParah=findViewById(R.id.engparah);
+
 
         Intent intent = getIntent();
         int start = intent.getIntExtra("start", 0);
@@ -31,16 +29,12 @@ public class EngSurah extends AppCompatActivity  {
 
 
 
-        for (int i = start; i < end - 1; i++) {
+        for (int i = start; i < end ; i++) {
             data.add(qat.QuranArabicText[i]);
         }
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
                 (this, android.R.layout.simple_list_item_1,data);
-        engSurah.setAdapter(arrayAdapter);
-
-
-
+        engParah.setAdapter(arrayAdapter);
 
     }
-
 }

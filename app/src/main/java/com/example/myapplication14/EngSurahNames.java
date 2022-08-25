@@ -35,7 +35,7 @@ public class EngSurahNames extends AppCompatActivity{
                 int end = qdh.SSP[i+1];
                 QuranArabicText qat = new QuranArabicText();
                 if (start == 6342) {
-                    end = qat.QuranArabicText.length - 1;
+                    end = qat.QuranArabicText.length-1;
                 }
                 Intent intent = new Intent(EngSurahNames.this, EngSurah.class);
                 intent.putExtra("start", start);
