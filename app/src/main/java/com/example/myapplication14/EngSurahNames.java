@@ -31,12 +31,17 @@ public class EngSurahNames extends AppCompatActivity{
         listVieweng.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                int start = qdh.SSP[i];
-                int end = qdh.SSP[i+1];
                 QuranArabicText qat = new QuranArabicText();
+                int end;
+                int start = qdh.SSP[i];
                 if (start == 6342) {
-                    end = qat.QuranArabicText.length-1;
+                    end = qat.QuranArabicText.length+1;
                 }
+                else {
+                    end = qdh.SSP[i + 1];
+                }
+
+
                 Intent intent = new Intent(EngSurahNames.this, EngSurah.class);
                 intent.putExtra("start", start);
                 intent.putExtra("end", end);

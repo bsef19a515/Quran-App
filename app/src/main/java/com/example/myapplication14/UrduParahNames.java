@@ -31,12 +31,16 @@ public class UrduParahNames extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                int start = qdh.PSP[i];
-                int end = qdh.PSP[i+1];
                 QuranArabicText qat = new QuranArabicText();
-                if (start == 5748) {
-                    end = qat.QuranArabicText.length-1;
+                int start = qdh.PSP[i];
+                int end ;
+                if (start == 5747) {
+                    end = qat.QuranArabicText.length;
                 }
+                else {
+                    end = qdh.PSP[i + 1];
+                }
+
                 Intent intent = new Intent(UrduParahNames.this, EngParah.class);
                 intent.putExtra("start", start);
                 intent.putExtra("end", end);
