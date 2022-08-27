@@ -5,6 +5,9 @@
     <string name="urdusurah">Urdu Surah Index</string>
     <string name="englishpara">English Parah Index</string>
     <string name="urdupara">Urdu Parah Index</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+
 
 
 </resources>

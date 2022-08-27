@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_engsurah"
+            android:title="Eng_Surah" />
+
+        <item
+            android:id="@+id/nav_urdusurah"
+            android:title="Urdu_Surah" />
+
+        <item
+            android:id="@+id/nav_engparah"
+            android:title="Eng_Parah" />
+
+        <item
+            android:id="@+id/nav_urduparah"
+            android:title="Urdu_Parah" />
+
+    </group>
+
+
+    <item android:title="Reading">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_chrome_reader"
+                    android:title="Chrome Reader" />
+                <item
+                    android:id="@+id/nav_rea_more"
+                    android:title="Read More" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Comments">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/Nav_add_comment"
+                    android:title="Add Comment" />
+                <item
+                    android:id="@+id/nav_insert_comment"
+                    android:title="Insert Comment" />
+            </group>
+        </menu>
+    </item>
+
+
+
+</menu>
