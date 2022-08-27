@@ -3,13 +3,16 @@ package com.example.myapplication14;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class EngParahNames extends AppCompatActivity {
+    Window window;
     ListView listView;
 
     QDH qdh=new QDH();
@@ -23,8 +26,10 @@ public class EngParahNames extends AppCompatActivity {
         String[] parahNameseng=qdh.englishParahName;
 
 
+//        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
+//                (this, android.R.layout.simple_list_item_1,parahNameseng);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
-                (this, android.R.layout.simple_list_item_1,parahNameseng);
+                (getApplicationContext(),R.layout.text_layout_nastaleeq,parahNameseng);
         listView = findViewById(R.id.listviewenglishpara);
         listView.setAdapter(arrayAdapter);
 
@@ -47,6 +52,10 @@ public class EngParahNames extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        if(Build.VERSION.SDK_INT>=21){
+            window=this.getWindow();
+            window.setStatusBarColor(this.getResources().getColor(R.color.green));
+        }
 
     }
 }

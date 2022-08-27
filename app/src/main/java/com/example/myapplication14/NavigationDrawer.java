@@ -8,13 +8,16 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.Window;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
 public class NavigationDrawer extends AppCompatActivity {
+    Window window;
     NavigationView navigationView;
     DrawerLayout drawerLayout;
     Toolbar toolbars;
@@ -93,5 +96,9 @@ public class NavigationDrawer extends AppCompatActivity {
             }
 
         });
+        if(Build.VERSION.SDK_INT>=21){
+            window=this.getWindow();
+            window.setStatusBarColor(this.getResources().getColor(R.color.green));
+        }
 }
 }

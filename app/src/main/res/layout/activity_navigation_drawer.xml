@@ -10,13 +10,14 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/green">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#204C22"
+                android:background="#1A701E"
                 app:title="Quran App"
                 app:titleTextColor="#FFC107" />
 
