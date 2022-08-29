@@ -4,66 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#205322"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/quranapp"
-        android:layout_width="123dp"
-        android:layout_height="40dp"
+        android:layout_width="178dp"
+        android:layout_height="52dp"
         android:layout_marginTop="68dp"
         android:background="#CFFBD1"
         android:backgroundTint="#E9FDD0"
         android:text="@string/quranapp"
         android:textColor="#307A33"
-        android:textSize="24sp"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/englishsurah"
-        android:layout_width="246dp"
-        android:layout_height="55dp"
-        android:backgroundTint="#37853A"
-        android:text="@string/englishsurah"
-        app:layout_constraintBottom_toTopOf="@+id/urdusurah"
-        app:layout_constraintEnd_toEndOf="@+id/quranapp"
-        app:layout_constraintStart_toStartOf="@+id/quranapp"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="215dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        android:text="Get Translation"
+        android:textColor="#F6F2F2"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quranapp" />
 
     <Button
-        android:id="@+id/urdusurah"
+        android:id="@+id/searchbar"
+        android:layout_width="238dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#3A9A3D"
+        android:inputType="number"
+        android:text="GET English translation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <Button
+        android:id="@+id/btnsearch"
         android:layout_width="250dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="100dp"
-        android:backgroundTint="#347A37"
-        android:text="@string/urdusurah"
-        app:layout_constraintEnd_toEndOf="@+id/englishsurah"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/englishsurah"
-        app:layout_constraintTop_toBottomOf="@+id/quranapp" />
+        android:layout_height="58dp"
+        android:backgroundTint="#3A9A3D"
+        android:text="Get Urdu Translation"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchbar"
+        app:layout_constraintVertical_bias="0.04" />
 
-    <Button
-        android:id="@+id/englishparah"
-        android:layout_width="253dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#37853A"
-        android:text="@string/englishpara"
-        app:layout_constraintEnd_toEndOf="@+id/urdusurah"
-        app:layout_constraintHorizontal_bias="0.714"
-        app:layout_constraintStart_toStartOf="@+id/urdusurah"
-        app:layout_constraintTop_toBottomOf="@+id/urdusurah" />
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="360dp"
+        android:layout_height="324dp"
+        android:background="#B3DA86"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnsearch" />
 
-    <Button
-        android:id="@+id/urduparah"
-        android:layout_width="248dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#37853A"
-        android:text="@string/urdupara"
-        app:layout_constraintEnd_toEndOf="@+id/englishparah"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="@+id/englishparah"
-        app:layout_constraintTop_toBottomOf="@+id/englishparah" />
 </androidx.constraintlayout.widget.ConstraintLayout>

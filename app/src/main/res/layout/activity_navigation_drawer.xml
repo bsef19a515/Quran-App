@@ -21,9 +21,11 @@
                 app:title="Quran App"
                 app:titleTextColor="#FFC107" />
 
+
         </RelativeLayout>
 
-        <com.google.android.material.navigation.NavigationView
+
+    <com.google.android.material.navigation.NavigationView
             android:id="@+id/nav_view"
             android:layout_gravity="start"
             android:layout_height="match_parent"
