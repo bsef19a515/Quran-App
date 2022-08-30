@@ -34,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@+id/quranapp" />
 
     <Button
-        android:id="@+id/searchbar"
+        android:id="@+id/btnengtrans"
         android:layout_width="238dp"
         android:layout_height="58dp"
         android:backgroundTint="#3A9A3D"
@@ -47,7 +47,7 @@
         app:layout_constraintVertical_bias="0.022" />
 
     <Button
-        android:id="@+id/btnsearch"
+        android:id="@+id/btnurdutrans"
         android:layout_width="250dp"
         android:layout_height="58dp"
         android:backgroundTint="#3A9A3D"
@@ -57,7 +57,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchbar"
+        app:layout_constraintTop_toBottomOf="@+id/btnengtrans"
         app:layout_constraintVertical_bias="0.04" />
 
     <ListView
@@ -68,6 +68,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnsearch" />
+        app:layout_constraintTop_toBottomOf="@+id/btnurdutrans" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

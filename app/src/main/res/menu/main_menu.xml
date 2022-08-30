@@ -22,6 +22,11 @@
             android:id="@+id/nav_search"
             android:title="Search" />
 
+        <item
+            android:id="@+id/nav_translation"
+            android:title="Translation" />
+
+
 
     </group>
 

@@ -59,10 +59,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor cursorCourses = db.rawQuery("SELECT "+FatehMuhammadJalandhri+" FROM " + Table_name, null);
+        Cursor cursorCourses = db.rawQuery("SELECT "+MuftiTaqiUsmani+" FROM " + Table_name, null);
 //        Log.d("query executed",cursorCourses.getString(0));
-//        ArrayList<Quran> studentArrayList = new ArrayList<>();
-        ArrayList<String> studentArrayList = new ArrayList<>();
+        ArrayList<String> quranArrayList = new ArrayList<>();
 
 
         // moving our cursor to first position.
@@ -73,23 +72,22 @@ public class DBHelper extends SQLiteOpenHelper {
 //                        cursorCourses.getInt(2),
 //                        cursorCourses.getInt(3),
 //                        cursorCourses.getString(4)));
-                studentArrayList.add(cursorCourses.getString(0));
+                quranArrayList.add(cursorCourses.getString(0));
             } while (cursorCourses.moveToNext());
 
         }
 
         cursorCourses.close();
-        return studentArrayList;
+        return quranArrayList;
     }
 
     public ArrayList<String> getUrduTranslation() {
 
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor cursorCourses = db.rawQuery("SELECT "+MuftiTaqiUsmani+" FROM " + Table_name, null);
+        Cursor cursorCourses = db.rawQuery("SELECT "+FatehMuhammadJalandhri+" FROM " + Table_name, null);
 //        Log.d("query executed",cursorCourses.getString(0));
-//        ArrayList<Quran> studentArrayList = new ArrayList<>();
-        ArrayList<String> studentArrayList = new ArrayList<>();
+        ArrayList<String> quranArrayList = new ArrayList<>();
 
 
         // moving our cursor to first position.
@@ -100,13 +98,40 @@ public class DBHelper extends SQLiteOpenHelper {
 //                        cursorCourses.getInt(2),
 //                        cursorCourses.getInt(3),
 //                        cursorCourses.getString(4)));
-                studentArrayList.add(cursorCourses.getString(0));
+                quranArrayList.add(cursorCourses.getString(0));
             } while (cursorCourses.moveToNext());
 
         }
 
         cursorCourses.close();
-        return studentArrayList;
+        return quranArrayList;
+    }
+
+
+    public ArrayList<String> find(int id) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursorCourses = db.rawQuery("SELECT "+ArabicText+" FROM " + Table_name+" WHERE "+SurahID+ " = "+ id ,null);
+//        Log.d("query executed",cursorCourses.getString(0));
+        ArrayList<String> quranArrayList = new ArrayList<>();
+
+
+        // moving our cursor to first position.
+        if (cursorCourses.moveToFirst()) {
+            do {
+//
+//                studentArrayList.add(new Quran(cursorCourses.getInt(1),
+//                        cursorCourses.getInt(2),
+//                        cursorCourses.getInt(3),
+//                        cursorCourses.getString(4)));
+                quranArrayList.add(cursorCourses.getString(0));
+            } while (cursorCourses.moveToNext());
+
+        }
+
+        cursorCourses.close();
+        return quranArrayList;
     }
 
 

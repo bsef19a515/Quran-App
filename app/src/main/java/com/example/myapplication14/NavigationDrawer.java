@@ -88,8 +88,15 @@ public class NavigationDrawer extends AppCompatActivity {
 
                     case R.id.nav_search:
                         Toast.makeText(getApplicationContext(),"Search is clicked",Toast.LENGTH_LONG).show();
-                        Intent search = new Intent(NavigationDrawer.this, MainActivity.class);
+                        Intent search = new Intent(NavigationDrawer.this, Search.class);
                         startActivity(search);
+                        break;
+
+
+                    case R.id.nav_translation:
+                        Toast.makeText(getApplicationContext(),"Translation is clicked",Toast.LENGTH_LONG).show();
+                        Intent translation = new Intent(NavigationDrawer.this, MainActivity.class);
+                        startActivity(translation);
                         break;
                 }
 
