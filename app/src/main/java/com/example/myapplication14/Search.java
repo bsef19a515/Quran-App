@@ -2,6 +2,7 @@ package com.example.myapplication14;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -14,8 +15,7 @@ import java.util.List;
 public class Search extends AppCompatActivity {
 
     EditText surah;
-    Button find;
-    ListView listview2;
+    Button geteng,geturdu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,25 +23,33 @@ public class Search extends AppCompatActivity {
         setContentView(R.layout.activity_search);
 
         surah=findViewById(R.id.searchbysurah);
-        find=findViewById(R.id.searchbtn);
-        listview2=findViewById(R.id.listview2);
+        geteng=findViewById(R.id.geteng);
+        geturdu=findViewById(R.id.geturdu);
 
-        find.setOnClickListener(new View.OnClickListener() {
+//        int text=Integer.parseInt(surah.getText().toString());
+
+
+        geteng.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent engtranslation = new Intent(Search.this, EngTransation.class);
+                int text=Integer.parseInt(surah.getText().toString());
 
-                DBHelper dbHelper = new DBHelper(Search.this);
-
-                Integer text=Integer.parseInt(surah.getText().toString());
-
-                List<String> list = dbHelper.find(text);
-                ArrayAdapter arrayAdapter = new ArrayAdapter<String>
-                        (Search.this, android.R.layout.simple_list_item_1,list);
-
-//
-                listview2.setAdapter(arrayAdapter);
-
+                engtranslation.putExtra("SuraID",text);
+                startActivity(engtranslation);
             }
         });
+
+        geturdu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent urdutranslation = new Intent(Search.this, UrduTranslation.class);
+                int text=Integer.parseInt(surah.getText().toString());
+
+                urdutranslation.putExtra("SuraID",text);
+                startActivity(urdutranslation);
+            }
+        });
+
     }
 }

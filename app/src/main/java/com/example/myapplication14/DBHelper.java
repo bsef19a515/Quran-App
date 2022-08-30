@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class DBHelper extends SQLiteOpenHelper {
     public static final String AyaID = "AyaID";
-    public static final String SurahID = "SuraID";
+    public static final String SuraID = "SuraID";
     public static final String AyaNo = "AyaNo";
     public static final String RakuID = "RakuID";
     public static final String PRakuID = "PRakuID";
@@ -40,7 +40,7 @@ public class DBHelper extends SQLiteOpenHelper {
         public void onCreate(SQLiteDatabase db) {
            // String createTableSTatementOne = "CREATE TABLE CustTable(CustomerID Integer PRIMARY KEY AUTOINCREMENT, " + CUSTOMER_NAME_FIRST + " Text, CustomerAge Int, ActiveCustomer BOOL) ";
                       String createTableSTatement = "CREATE TABLE " + Table_name + "(" +
-                    AyaID + " Integer PRIMARY KEY AUTOINCREMENT," + SurahID + " Integer,"
+                    AyaID + " Integer PRIMARY KEY AUTOINCREMENT," + SuraID + " Integer,"
                     + AyaNo + " Integer, " + ArabicText + " String, "+FatehMuhammadJalandhri+" String," +
                     MehmoodulHassan+" String,"+DrMohsinKhan+" String,"+MuftiTaqiUsmani+" String," +
                     RakuID+" Integer,"+PRakuID+" Integer,"+ParaID+" Integer ) ";
@@ -112,20 +112,56 @@ public class DBHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor cursorCourses = db.rawQuery("SELECT "+ArabicText+" FROM " + Table_name+" WHERE "+SurahID+ " = "+ id ,null);
+
+
+        Cursor cursorCourses = db.rawQuery("SELECT  ArabicText,MuftiTaqiUsmani FROM " + Table_name+" WHERE "+SuraID+ " = "+ id ,null);
 //        Log.d("query executed",cursorCourses.getString(0));
         ArrayList<String> quranArrayList = new ArrayList<>();
+//        ArrayList<Quran> quranArrayList = new ArrayList<>();
+
 
 
         // moving our cursor to first position.
         if (cursorCourses.moveToFirst()) {
             do {
-//
-//                studentArrayList.add(new Quran(cursorCourses.getInt(1),
-//                        cursorCourses.getInt(2),
-//                        cursorCourses.getInt(3),
-//                        cursorCourses.getString(4)));
+
+//                quranArrayList.add(new Quran(cursorCourses.getInt(1),
+//                cursorCourses.getString(4)));
                 quranArrayList.add(cursorCourses.getString(0));
+                quranArrayList.add(cursorCourses.getString(1));
+
+            } while (cursorCourses.moveToNext());
+
+        }
+
+        cursorCourses.close();
+        return quranArrayList;
+    }
+
+
+
+    public ArrayList<String> findurdu(int id) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+
+
+        Cursor cursorCourses = db.rawQuery("SELECT  ArabicText,MehmoodulHassan FROM " + Table_name+" WHERE "+SuraID+ " = "+ id ,null);
+//        Log.d("query executed",cursorCourses.getString(0));
+        ArrayList<String> quranArrayList = new ArrayList<>();
+//        ArrayList<Quran> quranArrayList = new ArrayList<>();
+
+
+
+        // moving our cursor to first position.
+        if (cursorCourses.moveToFirst()) {
+            do {
+
+//                quranArrayList.add(new Quran(cursorCourses.getInt(1),
+//                cursorCourses.getString(4)));
+                quranArrayList.add(cursorCourses.getString(0));
+                quranArrayList.add(cursorCourses.getString(1));
+
             } while (cursorCourses.moveToNext());
 
         }
@@ -139,5 +175,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
 
-    }
+
+}
 
