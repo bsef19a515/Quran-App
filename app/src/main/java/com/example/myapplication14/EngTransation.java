@@ -26,7 +26,7 @@ public class EngTransation extends AppCompatActivity {
         DBHelper dbHelper = new DBHelper(EngTransation.this);
 
 
-        List<String> list = dbHelper.find(id);
+        List<String> list = dbHelper.findMuftiTaqiUsmani(id);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>
                 (EngTransation.this, android.R.layout.simple_list_item_1,list);
 

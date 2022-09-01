@@ -9,13 +9,14 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="75dp"
-        android:layout_height="40dp"
+        android:layout_width="114dp"
+        android:layout_height="45dp"
         android:layout_marginTop="40dp"
         android:text="Search"
-        android:textSize="24sp"
+        android:textColor="#75A340"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,29 +47,56 @@
 
     <Button
         android:id="@+id/geteng"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="80dp"
-        android:background="#225924"
+        android:layout_width="228dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="68dp"
         android:backgroundTint="#235725"
-        android:text="Get English Translation"
-        android:textSize="20sp"
+        android:backgroundTintMode="add"
+        android:text="Mufti Taqi Usmani"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchbysurah" />
 
     <Button
         android:id="@+id/geturdu"
-        android:layout_width="350dp"
-        android:layout_height="64dp"
-        android:text="Get Urdu Translation"
-        android:textSize="20sp"
+        android:layout_width="228dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#316A33"
+        android:text="Mehmood u lHassan"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/geteng" />
+
+    <Button
+        android:id="@+id/geteng2"
+        android:layout_width="228dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#4C672D"
+        android:text="DR Mohsin Khan"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/geturdu" />
+
+    <Button
+        android:id="@+id/geturdu2"
+        android:layout_width="230dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#3F5526"
+        android:text="Fateh Muh Jalandhri"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/geteng"
-        app:layout_constraintVertical_bias="0.063" />
+        app:layout_constraintTop_toBottomOf="@+id/geteng2"
+        app:layout_constraintVertical_bias="0.037" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

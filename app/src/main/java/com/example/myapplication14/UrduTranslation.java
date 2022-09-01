@@ -29,7 +29,7 @@ public class UrduTranslation extends AppCompatActivity {
             DBHelper dbHelper = new DBHelper(UrduTranslation.this);
 
 
-            List<String> list = dbHelper.findurdu(id);
+            List<String> list = dbHelper.findMehmoodulHassan(id);
             ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>
                     (UrduTranslation.this, android.R.layout.simple_list_item_1,list);
 

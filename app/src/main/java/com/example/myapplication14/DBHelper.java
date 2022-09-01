@@ -43,15 +43,16 @@ public class DBHelper extends SQLiteOpenHelper {
                     AyaID + " Integer PRIMARY KEY AUTOINCREMENT," + SuraID + " Integer,"
                     + AyaNo + " Integer, " + ArabicText + " String, "+FatehMuhammadJalandhri+" String," +
                     MehmoodulHassan+" String,"+DrMohsinKhan+" String,"+MuftiTaqiUsmani+" String," +
-                    RakuID+" Integer,"+PRakuID+" Integer,"+ParaID+" Integer ) ";
-           db.execSQL(createTableSTatement);
+                    RakuID+" Integer,"+PRakuID+" Integer,"+ParaID+" Integer) ";
+           //db.execSQL(createTableSTatement);
         }
 
 
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-            db.execSQL("DROP TABLE IF EXISTS " + Table_name);
-            onCreate(db);
+           db.execSQL("DROP TABLE IF EXISTS " + Table_name);
+           onCreate(db);
+
         }
 
 
@@ -108,7 +109,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 
-    public ArrayList<String> find(int id) {
+    public ArrayList<String> findMuftiTaqiUsmani(int id) {
 
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -140,7 +141,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
 
-    public ArrayList<String> findurdu(int id) {
+    public ArrayList<String> findMehmoodulHassan(int id) {
 
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -169,6 +170,68 @@ public class DBHelper extends SQLiteOpenHelper {
         cursorCourses.close();
         return quranArrayList;
     }
+
+    public ArrayList<String> DrMohsinKhan(int id) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+
+
+        Cursor cursorCourses = db.rawQuery("SELECT  ArabicText,DrMohsinKhan FROM " + Table_name+" WHERE "+SuraID+ " = "+ id ,null);
+//        Log.d("query executed",cursorCourses.getString(0));
+        ArrayList<String> quranArrayList = new ArrayList<>();
+//        ArrayList<Quran> quranArrayList = new ArrayList<>();
+
+
+
+        // moving our cursor to first position.
+        if (cursorCourses.moveToFirst()) {
+            do {
+
+//                quranArrayList.add(new Quran(cursorCourses.getInt(1),
+//                cursorCourses.getString(4)));
+                quranArrayList.add(cursorCourses.getString(0));
+                quranArrayList.add(cursorCourses.getString(1));
+
+            } while (cursorCourses.moveToNext());
+
+        }
+
+        cursorCourses.close();
+        return quranArrayList;
+    }
+
+    public ArrayList<String> FatehmuhJalandhri(int id) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+
+
+        Cursor cursorCourses = db.rawQuery("SELECT  ArabicText,FatehMuhammadJalandhri FROM " + Table_name+" WHERE "+SuraID+ " = "+ id ,null);
+//        Log.d("query executed",cursorCourses.getString(0));
+        ArrayList<String> quranArrayList = new ArrayList<>();
+//        ArrayList<Quran> quranArrayList = new ArrayList<>();
+
+
+
+        // moving our cursor to first position.
+        if (cursorCourses.moveToFirst()) {
+            do {
+
+//                quranArrayList.add(new Quran(cursorCourses.getInt(1),
+//                cursorCourses.getString(4)));
+                quranArrayList.add(cursorCourses.getString(0));
+                quranArrayList.add(cursorCourses.getString(1));
+
+            } while (cursorCourses.moveToNext());
+
+        }
+
+        cursorCourses.close();
+        return quranArrayList;
+    }
+
+
 
 
 
