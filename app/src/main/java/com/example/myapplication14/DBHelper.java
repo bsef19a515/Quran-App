@@ -232,6 +232,37 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 
+    public ArrayList<String> DrMohsinKhantrans() {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+
+
+        Cursor cursorCourses = db.rawQuery("SELECT  ArabicText,DrMohsinKhan FROM " + Table_name,null);
+//        Log.d("query executed",cursorCourses.getString(0));
+        ArrayList<String> quranArrayList = new ArrayList<>();
+//        ArrayList<Quran> quranArrayList = new ArrayList<>();
+
+
+
+        // moving our cursor to first position.
+        if (cursorCourses.moveToFirst()) {
+            do {
+
+//                quranArrayList.add(new Quran(cursorCourses.getInt(1),
+//                cursorCourses.getString(4)));
+                quranArrayList.add(cursorCourses.getString(0));
+                quranArrayList.add(cursorCourses.getString(1));
+
+            } while (cursorCourses.moveToNext());
+
+        }
+
+        cursorCourses.close();
+        return quranArrayList;
+    }
+
+
 
 
 

@@ -37,7 +37,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Intent intent2=new Intent(MainActivity.this,MainRecycler2.class);
                     startActivity(intent2);
                     break;
-
+                case R.id.recycleengtrans:
+                    Intent intent3=new Intent(MainActivity.this,MainRecycler3.class);
+                    startActivity(intent3);
+                    break;
             }
 
         }

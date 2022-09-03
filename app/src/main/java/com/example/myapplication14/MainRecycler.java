@@ -14,6 +14,7 @@ public class MainRecycler extends AppCompatActivity {
      String[] engparahnames=qdh.englishParahName;
      String [] urduparanames=qdh.ParahName;
 
+
     //String s1[]={"kinza","muqaddas","pakiza","shazia","sadia","seher"};
 
 

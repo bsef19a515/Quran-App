@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 public class MainRecycler2 extends AppCompatActivity {
@@ -16,6 +17,7 @@ public class MainRecycler2 extends AppCompatActivity {
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +25,8 @@ public class MainRecycler2 extends AppCompatActivity {
 
 
             recyclerView = findViewById(R.id.recycle2);
-            MyAdapter myAdapter = new MyAdapter(this, engsurahnames,urdusurahnames);
-            recyclerView.setAdapter(myAdapter);
+            MyAdapter2 myAdapter2 = new MyAdapter2(this, engsurahnames,urdusurahnames);
+            recyclerView.setAdapter(myAdapter2);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 

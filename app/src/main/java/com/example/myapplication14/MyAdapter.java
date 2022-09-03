@@ -1,6 +1,8 @@
 package com.example.myapplication14;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
     Context c;
     String s1[],s2[];
+    QDH qdh=new QDH();
 
     public MyAdapter(Context c,String s1[],String s2[]) {
 
@@ -30,9 +33,30 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyAdapter.MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.text.setText(s1[position]);
         holder.text2.setText(s2[position]);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    QuranArabicText qat = new QuranArabicText();
+                    int start = qdh.PSP[position];
+                    int end;
+                    if (start == 5747) {
+                        end = qat.QuranArabicText.length;
+                    } else {
+                        end = qdh.PSP[position + 1];
+                    }
+
+                    Intent intent = new Intent(c, EngParah.class);
+                    intent.putExtra("start", start);
+                    intent.putExtra("end", end);
+                    c.startActivity(intent);
+
+
+                }
+
+        });
 
     }
 
