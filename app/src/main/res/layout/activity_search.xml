@@ -65,7 +65,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="12dp"
         android:backgroundTint="#316A33"
-        android:text="Mehmood u lHassan"
+        android:text="Mehmood ul Hassan"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"

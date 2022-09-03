@@ -93,7 +93,7 @@ public class NavigationDrawer extends AppCompatActivity {
                         break;
 
 
-                    case R.id.nav_translation:
+                    case R.id.nav_recyclerview:
                         Toast.makeText(getApplicationContext(),"Translation is clicked",Toast.LENGTH_LONG).show();
                         Intent translation = new Intent(NavigationDrawer.this, MainActivity.class);
                         startActivity(translation);

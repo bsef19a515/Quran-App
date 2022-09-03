@@ -3,7 +3,7 @@
 
 
     android:fontFamily="@font/nastaleeq"
-    android:textSize="28dp"
+    android:textSize="24dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 

@@ -23,51 +23,42 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="215dp"
-        android:layout_height="36dp"
+        android:layout_width="191dp"
+        android:layout_height="44dp"
         android:layout_marginTop="16dp"
-        android:text="Get Translation"
+        android:text="Recycler View"
         android:textColor="#F6F2F2"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.561"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quranapp" />
 
     <Button
-        android:id="@+id/btnengtrans"
-        android:layout_width="238dp"
-        android:layout_height="58dp"
+        android:id="@+id/recpara"
+        android:layout_width="179dp"
+        android:layout_height="52dp"
         android:backgroundTint="#3A9A3D"
         android:inputType="number"
-        android:text="GET English translation"
+        android:text="Parah Names"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.038" />
 
     <Button
-        android:id="@+id/btnurdutrans"
-        android:layout_width="250dp"
-        android:layout_height="58dp"
+        android:id="@+id/recsurah"
+        android:layout_width="176dp"
+        android:layout_height="51dp"
         android:backgroundTint="#3A9A3D"
-        android:text="Get Urdu Translation"
+        android:text="Surah Names"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnengtrans"
+        app:layout_constraintTop_toBottomOf="@+id/recpara"
         app:layout_constraintVertical_bias="0.04" />
-
-    <ListView
-        android:id="@+id/listview"
-        android:layout_width="360dp"
-        android:layout_height="324dp"
-        android:background="#B3DA86"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnurdutrans" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

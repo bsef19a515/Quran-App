@@ -29,7 +29,7 @@ public class UrduParahNames extends AppCompatActivity {
 //        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
 //                (this, android.R.layout.simple_list_item_1,parahNamesUrdu);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
-                (getApplicationContext(),R.layout.text_layout_nastaleeq,parahNamesUrdu);
+                (getApplicationContext(),R.layout.text_layout,parahNamesUrdu);
         listView = findViewById(R.id.listviewurdupara);
         listView.setAdapter(arrayAdapter);
 

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication14">
         <activity
+            android:name=".MainRecycler2"
+            android:exported="false" />
+        <activity
+            android:name=".MainRecycler"
+            android:exported="false" />
+        <activity
             android:name=".UrduTranslation2"
             android:exported="false" />
         <activity

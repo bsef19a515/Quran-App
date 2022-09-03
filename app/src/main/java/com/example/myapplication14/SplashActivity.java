@@ -26,6 +26,7 @@ public class SplashActivity extends AppCompatActivity {
 
                 }
                 finally {
+                  // Intent intent=new Intent(SplashActivity.this,MainRecycler.class);
                     Intent intent=new Intent(SplashActivity.this,NavigationDrawer.class);
                     startActivity(intent);
                 }

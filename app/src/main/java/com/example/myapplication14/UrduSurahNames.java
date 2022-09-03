@@ -29,7 +29,7 @@ public class UrduSurahNames extends AppCompatActivity {
 //        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
 //                (this, android.R.layout.simple_list_item_1,surahNamesurdu);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
-                (getApplicationContext(),R.layout.text_layout_nastaleeq,surahNamesurdu);
+                (getApplicationContext(),R.layout.text_layout,surahNamesurdu);
         listView = findViewById(R.id.listviewurdu);
         listView.setAdapter(arrayAdapter);
 
